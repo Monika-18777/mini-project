@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitTrack - Personal Fitness Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🏃‍♀️ FitTrack</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#stats">Dashboard</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="input-section">
+      <h2>Enter Your Daily Fitness Data</h2>
+      <form id="fitnessForm">
+        <label>Steps Walked:</label>
+        <input type="number" id="steps" required>
+        <label>Calories Burned:</label>
+        <input type="number" id="calories" required>
+        <label>Water Intake (Liters):</label>
+        <input type="number" id="water" required>
+        <label>Sleep Hours:</label>
+        <input type="number" id="sleep" required>
+        <button type="submit">Add Entry</button>
+      </form>
+    </section>
+
+    <section id="stats" class="chart-section">
+      <h2>Your Fitness Progress</h2>
+      <canvas id="fitnessChart"></canvas>
+    </section>
+
+    <section class="history">
+      <h2>Recent Entries</h2>
+      <ul id="historyList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 FitTrack | Stay Healthy 💪</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
